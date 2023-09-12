@@ -1,12 +1,24 @@
+import { useState } from "react";
+
 export const AddCategory = ({ setCategories, categories }) => {
-  let valor = "";
-  const addNewCategory = (valor) => {
-    valor != "" && setCategories([...categories, valor]);
+  const [value, setValue] = useState("");
+  const addNewCategory = (value) => {
+    value != "" &&
+      !categories.includes(value) &&
+      setCategories([...categories, value]);
+  };
+  const onSubmit = (event) => {
+    event.preventDefault();
+    addNewCategory(value);
+    setValue("");
   };
   return (
-    <>
-      <input type="text" onChange={(e) => (valor = e.target.value)} />
-      <button onClick={() => addNewCategory(valor)}>Agregar</button>
-    </>
+    <form onSubmit={(e) => onSubmit(e)}>
+      <input
+        type="text"
+        onChange={(e) => setValue(e.target.value)}
+        value={value}
+      />
+    </form>
   );
 };

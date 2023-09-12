@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "../src/styles.css";
 import { AddCategory } from "./Components/AddCategory";
+import { GiftGrid } from "./Components/GiftGrid";
 
 const apiKey = "zgpzLecnpi3Gqk6ae7Dko6eO0Mv95laR";
 
@@ -11,11 +12,9 @@ export const GiftExpertApp = () => {
     <>
       <div>Gift's App</div>
       <AddCategory setCategories={setCategories} categories={categories} />
-      <ol>
-        {categories.map((category) => {
-          return <li key={category}>{category}</li>;
-        })}
-      </ol>
+      {categories.map((category) => (
+        <GiftGrid key={category} category={category} apiKey={apiKey}/>
+      ))}
     </>
   );
 };
