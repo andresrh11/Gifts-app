@@ -9,7 +9,7 @@ export const GiftExpertApp = () => {
 
   return (
     <>
-      <div>Gift Expert App</div>
+      <div>Gift's App</div>
       <AddCategory setCategories={setCategories} categories={categories} />
       <ol>
         {categories.map((category) => {

@@ -61,3 +61,7 @@
   .card img {
     width: 100%;
   }
+  button{
+    background-color: rgb(234, 234, 234);
+    border: none;
+  }
