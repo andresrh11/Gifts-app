@@ -65,3 +65,19 @@
     background-color: rgb(234, 234, 234);
     border: none;
   }
+ .grilla{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 620px;
+  height: 410px;
+  margin: 10px;
+ }
+ img{
+  width: 230px;
+  height: 180px;
+  padding: 10px;
+  border-radius: 15px;
+ }
+ .tip{
+  margin: 20px;
+ }

@@ -10,10 +10,10 @@ export const GiftExpertApp = () => {
 
   return (
     <>
-      <div>Gift's App</div>
+      <div className="tip">Gift's App</div>
       <AddCategory setCategories={setCategories} categories={categories} />
       {categories.map((category) => (
-        <GiftGrid key={category} category={category} apiKey={apiKey}/>
+        <GiftGrid key={category} category={category} apiKey={apiKey} />
       ))}
     </>
   );

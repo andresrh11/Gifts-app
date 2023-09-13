@@ -5,7 +5,7 @@ export const AddCategory = ({ setCategories, categories }) => {
   const addNewCategory = (value) => {
     value != "" &&
       !categories.includes(value) &&
-      setCategories([...categories, value]);
+      setCategories([value, ...categories]);
   };
   const onSubmit = (event) => {
     event.preventDefault();
