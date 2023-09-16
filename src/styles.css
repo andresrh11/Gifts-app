@@ -67,7 +67,7 @@
   }
  .grilla{
   display: grid;
-  grid-template-columns: repeat(4, 2fr);
+  grid-template-columns: repeat(4, 1fr);
   width: auto;
   height: auto;
   margin: 10px;
