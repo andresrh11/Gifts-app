@@ -11,7 +11,7 @@ export const getImg = async (setImagenes, apiKey, category) => {
       title: e.title,
       url: e.images.original.url,
     }));
-    console.log(image);
+
     setImagenes(image);
     return image;
   } catch (error) {

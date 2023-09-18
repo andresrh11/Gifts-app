@@ -1,16 +1,12 @@
 import { useEffect, useState } from "react";
 import { getImg } from "../Helpers/getImages";
 import { GifCard } from "./GifCard";
+import { useFetchGifs } from "../Hooks/useFetchGifs";
 const urlGif = "https://api.giphy.com/v1/gifs/search";
 const urlSticket = "https://api.giphy.com/v1/stickers/search";
 
 export const GiftGrid = ({ category, apiKey }) => {
-  let i = 1;
-  const [imagenes, setImagenes] = useState([]);
-  useEffect(() => {
-    console.log(1);
-    getImg(setImagenes, apiKey, category);
-  }, []);
+  const { imagenes, isLoading } = useFetchGifs(category, apiKey);
 
   return (
     <>
