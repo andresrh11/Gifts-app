@@ -68,24 +68,22 @@
  .grilla{
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  width: auto;
-  height: auto;
-  margin: 10px;
-  border: 1px solid green;
+  grid-gap: 10px;
+  grid-auto-rows: minmax(10px, auto);
+ 
   
-  justify-content: space-between;
  }
  img{
   width: 230px;
   height: 180px;
   padding: 10px;
   border-radius: 15px;
-  border: 1px solid blue;
+ 
  }
  .tip{
   margin: 20px;
  }
  .ttl{
-  border: 1px solid red;
+  
   margin: 20px;
  }

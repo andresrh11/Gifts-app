@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { getImg } from "../Helpers/getImages";
+import { GifCard } from "./GifCard";
 const urlGif = "https://api.giphy.com/v1/gifs/search";
 const urlSticket = "https://api.giphy.com/v1/stickers/search";
 
@@ -14,18 +15,11 @@ export const GiftGrid = ({ category, apiKey }) => {
   return (
     <>
       <h3>{category}</h3>
-      <div className="grilla">
-        <ol>
-          {imagenes.map((e) => (
-            <div key={e.id} className="grilla">
-              <img src={e.url} alt="" key={e.id} />
-              <li key={imagenes.id} className="ttl">
-                {e.title}
-              </li>
-            </div>
-          ))}
-        </ol>
-      </div>
+      <ol className="card-grid">
+        {imagenes.map((ev) => (
+          <GifCard key={ev.id} {...ev} />
+        ))}
+      </ol>
     </>
   );
 };
