@@ -12,16 +12,20 @@ export const GiftGrid = ({ category, apiKey }) => {
   }, []);
 
   return (
-    <div>
+    <>
       <h3>{category}</h3>
-      {imagenes.map((e) => (
-        <div key={e.id} className="grilla">
-          <ol>
-            <img src={e.url} alt="" key={e.id} />
-            <li key={imagenes.id}> {e.title}</li>
-          </ol>
-        </div>
-      ))}
-    </div>
+      <div className="grilla">
+        <ol>
+          {imagenes.map((e) => (
+            <div key={e.id} className="grilla">
+              <img src={e.url} alt="" key={e.id} />
+              <li key={imagenes.id} className="ttl">
+                {e.title}
+              </li>
+            </div>
+          ))}
+        </ol>
+      </div>
+    </>
   );
 };
