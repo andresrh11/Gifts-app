@@ -11,6 +11,7 @@ export const GiftGrid = ({ category, apiKey }) => {
   return (
     <>
       <h3>{category}</h3>
+      {isLoading && <h2>Cargando...</h2>}
       <ol className="card-grid">
         {imagenes.map((ev) => (
           <GifCard key={ev.id} {...ev} />
