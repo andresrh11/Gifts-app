@@ -3,6 +3,7 @@ import "../src/styles.css";
 import { AddCategory } from "./Components/AddCategory";
 import { GiftGrid } from "./Components/GiftGrid";
 import { ButtonSwitch } from "./Components/ButtonSwitch";
+import Footer from "./Components/Footer";
 
 const apiKey = "zgpzLecnpi3Gqk6ae7Dko6eO0Mv95laR";
 
@@ -23,6 +24,7 @@ export const GiftExpertApp = () => {
           tipo={tipo}
         />
       ))}
+      <Footer />
     </>
   );
 };

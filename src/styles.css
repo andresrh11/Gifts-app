@@ -115,3 +115,8 @@
   animation: pixeld 20s linear infinite;
   z-index: -1;
 }
+.foot{
+  padding: 10px;
+  background: none;
+  font-family: Helvetica, Arial, sans-serif;
+}
