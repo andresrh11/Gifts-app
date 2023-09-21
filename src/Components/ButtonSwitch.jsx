@@ -1,16 +1,12 @@
-import { useEffect, useState } from "react";
-
-export const ButtonSwitch = () => {
-  const [tipo, setTipo] = useState("Stickers");
+export const ButtonSwitch = ({ setTipo, tipo }) => {
   const changeName = () => {
-    tipo == "Gifs" ? setTipo("Stickets") : setTipo("Gifs");
+    tipo == "Gifs" ? setTipo("Stickers") : setTipo("Gifs");
   };
-  useEffect(() => {
-    console.log(1);
-  }, [tipo]);
   return (
     <>
-      <button className="btnpx" onClick={() => changeName()}>{tipo}</button>
+      <button className="btnpx" onClick={() => changeName()}>
+        {tipo}
+      </button>
     </>
   );
 };

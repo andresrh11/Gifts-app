@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "../src/styles.css";
 import { AddCategory } from "./Components/AddCategory";
 import { GiftGrid } from "./Components/GiftGrid";
@@ -8,15 +8,20 @@ const apiKey = "zgpzLecnpi3Gqk6ae7Dko6eO0Mv95laR";
 
 export const GiftExpertApp = () => {
   const [categories, setCategories] = useState(["One Punch", "Dragon Ball"]);
-
+  const [tipo, setTipo] = useState("Stickers");
+  console.log(tipo);
   return (
     <>
-      <nav>Menu</nav>
-      <div className="tip">Gift's App</div>
+      <h2>{tipo} App</h2>
       <AddCategory setCategories={setCategories} categories={categories} />
-      <ButtonSwitch />
+      <ButtonSwitch tipo={tipo} setTipo={setTipo} />
       {categories.map((category) => (
-        <GiftGrid key={category} category={category} apiKey={apiKey} />
+        <GiftGrid
+          key={category}
+          category={category}
+          apiKey={apiKey}
+          tipo={tipo}
+        />
       ))}
     </>
   );
