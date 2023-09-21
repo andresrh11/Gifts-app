@@ -5,7 +5,7 @@ export const ButtonSwitch = ({ setTipo, tipo }) => {
   return (
     <>
       <button className="btnpx" onClick={() => changeName()}>
-        {tipo}
+        Stickers or Gif's
       </button>
     </>
   );
