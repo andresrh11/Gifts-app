@@ -1,8 +1,14 @@
 const urlSticker = "https://api.giphy.com/v1/stickers/search";
-export const getSticker = async (setStickers, apiKey, category, setIsLoad) => {
+export const getSticker = async (
+  setStickers,
+  apiKey,
+  category,
+  setIsLoad,
+  limit
+) => {
   try {
     const promise = await fetch(
-      `${urlSticker}?q=${category}&limit=8&api_key=${apiKey}`
+      `${urlSticker}?q=${category}&limit=${limit}&api_key=${apiKey}`
     );
     const { data } = await promise.json();
     const image = data.map((e) => ({

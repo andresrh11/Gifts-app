@@ -6,9 +6,9 @@ import { useFetchStickers } from "../Hooks/useFetchStickers";
 const urlGif = "https://api.giphy.com/v1/gifs/search";
 const urlSticket = "https://api.giphy.com/v1/stickers/search";
 
-export const GiftGrid = ({ category, apiKey, tipo }) => {
-  const { imagenes, isLoading } = useFetchGifs(category, apiKey, tipo);
-  const { stickers } = useFetchStickers(category, apiKey, tipo);
+export const GiftGrid = ({ category, apiKey, tipo, limit }) => {
+  const { imagenes, isLoading } = useFetchGifs(category, apiKey, tipo, limit);
+  const { stickers } = useFetchStickers(category, apiKey, tipo, limit);
   return (
     <>
       <h3>{category}</h3>

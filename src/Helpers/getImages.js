@@ -1,9 +1,15 @@
 const urlGif = "https://api.giphy.com/v1/gifs/search";
 const urlSticket = "https://api.giphy.com/v1/stickers/search";
-export const getImg = async (setImagenes, apiKey, category, setIsLoading) => {
+export const getImg = async (
+  setImagenes,
+  apiKey,
+  category,
+  setIsLoading,
+  limit
+) => {
   try {
     const promise = await fetch(
-      `${urlGif}?q=${category}&limit=8&api_key=${apiKey}`
+      `${urlGif}?q=${category}&limit=${limit}&api_key=${apiKey}`
     );
     const { data } = await promise.json();
     const image = data.map((e) => ({
