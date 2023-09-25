@@ -12,7 +12,6 @@ export const GiftExpertApp = () => {
   const [categories, setCategories] = useState(["One Punch", "Dragon Ball"]);
   const [tipo, setTipo] = useState("Stickers");
   const [limit, setLimit] = useState(8);
-  console.log(tipo);
   return (
     <>
       <h2>{tipo} App</h2>

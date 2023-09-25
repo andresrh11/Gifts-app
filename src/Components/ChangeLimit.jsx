@@ -1,8 +1,6 @@
 export const ChangeLimit = ({ setLimit }) => {
   const change = (e) => {
-    console.log(e);
     setLimit(e);
-    console.log(1);
   };
   return (
     <>
